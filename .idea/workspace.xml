@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8a0b804-cd4e-4380-ae31-9dd814757143" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/untitled.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/manifest.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/App.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/FiltersSection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/addNewUser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/errorOnUI.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/usersList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/serviceWorker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/style/App.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/style/User.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/style/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -249,12 +227,12 @@
       <workItem from="1541662118906" duration="29822000" />
       <workItem from="1541743368412" duration="31662000" />
       <workItem from="1542007946946" duration="9755000" />
-      <workItem from="1542018731298" duration="28529000" />
+      <workItem from="1542018731298" duration="29608000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144478000" />
+    <option name="totallyTimeSpent" value="145557000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
