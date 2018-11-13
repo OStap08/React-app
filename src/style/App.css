@@ -1,0 +1,11 @@
+.filter-section{
+    text-align: center;
+}
+button{
+    border: none;
+    height: 35px;
+    margin: 5px;
+}
+.filter-section button{
+    background: #16C0FE;
+}

@@ -1,0 +1,63 @@
+
+.card{
+  position: relative;
+  border: solid 1px black;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 400px;
+  box-sizing: border-box;
+}
+.isDataVisible{
+  border: solid 2px #16C0FE;
+}
+#result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+#result #about{
+  width: 100%;
+}
+.name {
+  font-size: 20px;
+}
+.offline{
+  color: red;
+}
+.online{
+  color: green;
+}
+.position{
+  display: flex;
+  align-items: center;
+  background: #D0CFCF;
+}
+.card div:nth-child(3){
+  padding: 5px;
+  justify-content: space-around;
+}
+.about{
+  min-height: 145px;
+  padding:10px;
+}
+#result img {
+  width: 50px;
+  height: 50px;
+}
+.delete, .add{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ff2620;
+}
+.add{
+  background: #20ff35;
+}
+.error{
+  color: red;
+}
+.notVisible{
+  display: none;
+}
