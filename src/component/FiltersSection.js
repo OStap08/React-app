@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {filterUsersFunc} from "../action/usersAction"
+
 
 class FiltersSection extends  Component{
     constructor(props){
@@ -12,15 +15,7 @@ class FiltersSection extends  Component{
     }
 
     filterUsers(showActiveUsers){
-        const {allUsers,updateUsersList} = this.props;
-
-        let filteredUsers = [];
-        allUsers.map((user, key) =>{
-            if(user.isActive === showActiveUsers){
-                filteredUsers.push(user);
-            }
-        });
-       updateUsersList(filteredUsers, allUsers);
+        this.props.filterUsersFunc(showActiveUsers, this.props.allUsers)
     }
 
     addVisionClass(stateButton){
@@ -34,20 +29,25 @@ class FiltersSection extends  Component{
     }
 
     render(){
-        let users = this.props.allUsers;
-        const {activeButton} = this.state;
+        const {activeButton, offlineButton, allVisionButton} = this.state;
+        const {filterUsersFunc, allUsers} = this.props;
         return(
             <div className="filter-section">
-                <button className={this.state.activeButton ? "" : "notVisible" }
+                <button className={activeButton ? "" : "notVisible" }
                         onClick={() =>{this.filterUsers(true); this.addVisionClass('activeButton')}}>
                     Show active users</button>
-                <button className={this.state.offlineButton ? "" : "notVisible" }
+                <button className={offlineButton ? "" : "notVisible" }
                         onClick={() =>{this.filterUsers(false); this.addVisionClass('offlineButton')}}>Show offline users</button>
-                <button className={this.state.allVisionButton ? "" : "notVisible" }
-                        onClick={() =>{this.props.updateUsersList(users, users); this.addVisionClass('allVisionButton')}}>Show all users</button>
+                <button className={allVisionButton ? "" : "notVisible" }
+                        onClick={() =>{ filterUsersFunc(null, allUsers); this.addVisionClass('allVisionButton')}}>Show all users</button>
             </div>
         )
     }
 }
 
-export default  FiltersSection ;
+const mapStateToProps = state =>({
+    renderedUsers: state.users.renderedUsers,
+    allUsers: state.users.allUsers,
+});
+
+export default connect(mapStateToProps, {filterUsersFunc})(FiltersSection);
