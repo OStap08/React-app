@@ -1,0 +1,53 @@
+@value --orange: #fb9f15;
+
+.navTabsContainer{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    height: 30px;
+    line-height:1.5;
+    background-color:#40C0CB;
+    border-bottom: 5px solid rgba(255,255,255,0.4);
+}
+.tab{
+    background-color: #fdb344;
+    padding: 7px 10px;
+    border-bottom: 4px solid #faff88;
+    text-transform: uppercase;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+    height:30px;
+    line-height:1.5;
+    background-color: rgba(255,255,255,0.2);
+    border-bottom: 4px solid rgba(255,255,255,0.6);
+}
+.tab:hover{
+    background-color: rgba(0,0,0,0.4);
+    border-bottom: 4px solid rgba(0,0,0,0.1);
+}
+.closeTab:hover,
+.tab:hover > .openTab{
+    color: white;
+    opacity: 1;
+}
+.activeTab{
+    background-color: rgba(0,0,0,0.4);
+    border-bottom: 4px solid rgba(0,0,0,0.1);
+}
+
+.tabsBody{
+    display: block;
+}
+.openTab{
+    margin-right: 10px;
+    font-size: 12px;
+    opacity: 0.5;
+}
+.closeTab {
+    display: inline-block;
+    padding: 2px;
+    margin-left: 10px;
+    font-size: 12px;
+    opacity: 0.5;
+}

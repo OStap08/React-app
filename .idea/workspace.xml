@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8a0b804-cd4e-4380-ae31-9dd814757143" name="Default" comment="move component logic in to redux">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/action/type.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/action/usersAction.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/Tabs(component).js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/userReducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/style/Tabs.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/App.js" afterPath="$PROJECT_DIR$/src/component/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/FiltersSection.js" afterPath="$PROJECT_DIR$/src/component/FiltersSection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/addNewUser.js" afterPath="$PROJECT_DIR$/src/component/addNewUser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/usersList.js" afterPath="$PROJECT_DIR$/src/component/usersList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FiltersSection.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FiltersSection.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/FiltersSection.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -69,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="867">
+              <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -349,12 +338,20 @@
       <workItem from="1547117535512" duration="43000" />
       <workItem from="1548830145912" duration="50234000" />
       <workItem from="1549000417178" duration="11000" />
-      <workItem from="1549003881486" duration="2032000" />
+      <workItem from="1549003881486" duration="2129000" />
     </task>
+    <task id="LOCAL-00001" summary="move component logic in to redux">
+      <created>1549005953650</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1549005953650</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208567000" />
+    <option name="totallyTimeSpent" value="208664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -690,20 +687,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/App.js">
+    <entry file="file://$PROJECT_DIR$/src/component/FiltersSection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="120">
+          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/FiltersSection.js">
+    <entry file="file://$PROJECT_DIR$/src/component/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        <state relative-caret-position="867">
+          <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
