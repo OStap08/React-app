@@ -1,0 +1,9 @@
+.avatarWindow{
+    position: absolute;
+    border: 1px solid blue;
+    padding: 5px;
+    top: 50px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+}

@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import {newUserFunc} from "../action/usersAction"
 import PropTypes from 'prop-types'
 
+import AvatarPopup from './AvatarPopup'
+
 
 class addNewUsers extends  Component{
     constructor(props){
@@ -11,6 +13,12 @@ class addNewUsers extends  Component{
             nameError:'',
             aboutError: '',
             emailError: '',
+            nameValue: '',
+            aboutValue: '',
+            emailValue: '',
+            isActive: false,
+            imgSelected: 'https://robohash.org/2?set=set3&size=100x100',
+            avatarsIsOpened: false
         };
         this.newUserItem = {};
         this.addUser = this.addUser.bind(this);
@@ -19,12 +27,13 @@ class addNewUsers extends  Component{
     }
 
     userIsValid(valueForFocus){
+        const {nameValue,aboutValue, emailValue, isActive, imgSelected} = this.state;
         let newUser = {
-            name:document.getElementById("name").value,
-            picture:'https://robohash.org/1?set=set3&size=100x100',
-            about:document.getElementById("about").value,
-            email:document.getElementById("email").value,
-            isActive:document.getElementById("isActive").checked
+            name: nameValue,
+            picture:imgSelected,
+            about:aboutValue,
+            email:emailValue,
+            isActive: isActive
         };
 
         if (newUser[valueForFocus] === "")  {
@@ -48,26 +57,65 @@ class addNewUsers extends  Component{
         this.props.newUserFunc(this.userIsValid(), this.newUserItem);
     }
 
+    changeStateStatus(){
+        if(this.state.isActive){
+            this.setState({isActive :false})
+        } else{
+            this.setState({isActive : true})
+        }
+    }
+
+    changeWindowAvatarState(){
+        if(this.state.avatarsIsOpened){
+            this.setState({avatarsIsOpened :false})
+        } else{
+            this.setState({avatarsIsOpened : true})
+        }
+    }
+
+    changeAvatar(img){
+        this.setState({imgSelected: img})
+    }
+
     render(){
-        let {nameError, aboutError, emailError} = this.state;
+        let {nameError, aboutError, emailError, isActive, imgSelected, avatarsIsOpened} = this.state;
         return(
             <div className={'card'} >
                 <div className="position">
-                    <img src="https://robohash.org/2?set=set3&size=100x100" alt="Avatar"/>
-                    <div className="name"><input type="text" id="name" placeholder="Put your name" onBlur={()=>this.userIsValid('name')}/>
+                    <img src={imgSelected} alt="Avatar"
+                         onClick={() => this.changeWindowAvatarState()}
+                    />
+                    <div className="name">
+                        <input type="text" id="name"
+                               placeholder="Put your name"
+                               onBlur={()=>this.userIsValid('name')}
+                               onChange={(event)=>{this.setState({nameValue: event.target.value})}}
+                        />
                         <span className="error">{nameError}</span>
                     </div>
                     <button className="add" onClick={()=> this.addUser() }>Add</button>
                 </div>
                 <div className="about">
-                    <input type="text" id="about" placeholder="Put your text" onBlur={()=>this.userIsValid('about')}/>
+                    <input type="text" id="about"
+                           placeholder="Put your text"
+                           onBlur={()=>this.userIsValid('about')}
+                           onChange={(event)=>{this.setState({aboutValue: event.target.value})}}
+                    />
                     <span className="error">{aboutError}</span>
                 </div>
                 <div className="position">
-                    <input type="email" id="email" placeholder="Put your email" onBlur={()=>this.userIsValid('email')}/>
+                    <input type="email" id="email"
+                           placeholder="Put your email"
+                           onBlur={()=>this.userIsValid('email')}
+                           onChange={(event)=>{this.setState({emailValue: event.target.value})}}
+                    />
                     <span className="error">{emailError}</span>
-                    <input type="checkbox" id="isActive"/>
+                    <input type="checkbox"
+                           checked={isActive}
+                           onChange={()=>this.changeStateStatus()}
+                    />
                 </div>
+                {avatarsIsOpened && <AvatarPopup changeAvatar={(img) => this.changeAvatar(img)}/>}
             </div>
         )
     }
